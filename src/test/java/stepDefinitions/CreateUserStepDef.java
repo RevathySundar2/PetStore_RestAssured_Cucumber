@@ -46,4 +46,9 @@ public class CreateUserStepDef {
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
     }
+
+    public void sampleadd()
+    {
+
+    }
 }
