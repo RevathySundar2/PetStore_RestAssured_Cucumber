@@ -1,6 +1,6 @@
 Feature: Creates list of users
 
-  @smoketest
+  @smoke
   Scenario: New user creation
     Given Creating a new user
     When Entering new user details
