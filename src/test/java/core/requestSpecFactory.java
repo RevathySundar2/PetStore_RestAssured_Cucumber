@@ -8,17 +8,14 @@ public final class requestSpecFactory {
     public  static RequestSpecification spec;
 
     public static RequestSpecification get() {
-        RequestSpecBuilder rqspec = null;
         if (spec == null) {
-
-            rqspec = new RequestSpecBuilder()
+            RequestSpecBuilder rqspec = new RequestSpecBuilder()
                     .setBaseUri(ConfigManager.FrameworkProperties().getProperty("baseuri"))
                     .setContentType(ContentType.JSON)
                     .setAccept(ContentType.JSON);
 
+            spec = rqspec.build();
         }
-        assert rqspec != null;
-        spec = rqspec.build();
         return spec;
     }
 }
