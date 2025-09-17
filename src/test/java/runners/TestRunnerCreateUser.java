@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         glue={"stepDefinitions"},
         monochrome=true,
         plugin={"pretty","html:target/HtmlReports/reports.html","junit:target/JUnitReports/reports.html", "json:target/JSonReports/reports.html"},
-        tags="@smoketest"
+        tags="@smoke"
 )
 
-public class CreateUserRunner {
+public class TestRunnerCreateUser {
 }
