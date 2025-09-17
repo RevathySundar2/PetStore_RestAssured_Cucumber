@@ -10,3 +10,4 @@ Feature: Creates list of users
 #      Given Read the user details
 #      When Providing the username
 #      Then User returned with status 200
+

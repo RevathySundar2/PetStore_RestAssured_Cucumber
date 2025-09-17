@@ -4,10 +4,13 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.Before;
 import payloads.UserPOJO;
 
-public class setupData {
-    Faker faker = new Faker();
-    UserPOJO userPayload = new UserPOJO();
+import java.util.ArrayList;
+import java.util.List;
 
+public class setupData {
+
+    UserPOJO userPayload = new UserPOJO();
+    Faker faker = new Faker();
 
     public UserPOJO setupUserData()
     {
@@ -21,4 +24,6 @@ public class setupData {
 
         return userPayload;
     }
+
+
 }

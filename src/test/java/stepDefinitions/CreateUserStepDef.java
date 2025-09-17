@@ -36,8 +36,9 @@ public class CreateUserStepDef {
     }
     @When("Entering new user details")
     public void entering_new_user_details() {
-        setupData newUser = new setupData();
-        UserPOJO user = newUser.setupUserData();
+
+        setupData userdata = new setupData();
+        UserPOJO user = userdata.setupUserData();
         response = client.post(endpoint, user);
        // transferresponse.setTransferingResponse(response);
     }
@@ -47,8 +48,4 @@ public class CreateUserStepDef {
         Assert.assertEquals(response.getStatusCode(),200);
     }
 
-    public void sampleadd()
-    {
-        System.out.println("demo");
-    }
 }
