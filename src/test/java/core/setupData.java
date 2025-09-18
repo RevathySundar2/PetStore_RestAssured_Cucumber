@@ -24,6 +24,16 @@ public class setupData {
 
         return userPayload;
     }
-
+public UserPOJO setupUserData(String username, String phone)
+{
+    userPayload.setId(faker.idNumber().hashCode());
+    userPayload.setUserName(username);
+    userPayload.setFirstName(username);
+    userPayload.setLastName(username);
+    userPayload.setEmail(faker.internet().safeEmailAddress());
+    userPayload.setPassword(faker.internet().password());
+    userPayload.setPhone(phone);
+    return userPayload;
+}
 
 }

@@ -48,4 +48,25 @@ public class CreateUserStepDef {
         Assert.assertEquals(response.getStatusCode(),200);
     }
 
+
+    @Given("Creating invalid users")
+    public void creatingInvalidUsers() {
+       System.out.println("Trying to create invalid users ======");
+        this.endpoint=ConfigManager.FrameworkProperties().getProperty("createuserurl");
+    }
+
+    @When("^Entering invalid users (.*) and (.*)$")
+    public void enteringInvalidUsersUsernameAndPhone(String username, String phone) {
+        setupData invaliduserdata = new setupData();
+        UserPOJO invalidUsers = invaliduserdata.setupUserData(username,phone);
+        response = client.post(endpoint,invalidUsers);
+
+    }
+
+    @Then("Assertions should fail")
+    public void assertionsShouldFail() {
+        Assert.assertEquals(400,response.getStatusCode());
+    }
+
+
 }
