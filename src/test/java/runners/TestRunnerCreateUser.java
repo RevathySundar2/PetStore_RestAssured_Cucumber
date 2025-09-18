@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue={"stepDefinitions"},
         monochrome=true,
-        plugin={"pretty","html:target/HtmlReports/reports.html","junit:target/JUnitReports/reports.html", "json:target/JSonReports/reports.html"},
+        plugin={"pretty","html:target/HtmlReports/reports.html","junit:target/JUnitReports/reports.html", "json:target/JSonReports/cucumber.json"},
         tags="@regression"
 )
 
