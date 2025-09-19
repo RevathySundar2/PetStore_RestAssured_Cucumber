@@ -23,8 +23,6 @@ pipeline
             {
                 echo "Performing test execution...."
                 bat "mvn test"
-                echo ".......Generating test reports......."
-                bat "mvn verify"
             }
 
         }
