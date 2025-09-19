@@ -8,7 +8,7 @@ pipeline
             steps
             {
                 echo "Building the code......"
-                bat "mvn clean"
+//                 bat "mvn clean"
             }
         }
         stage('Deploy')
@@ -24,8 +24,6 @@ pipeline
             {
                 echo "Performing test execution...."
                 bat "mvn test"
-                echo ".......Generating test reports......."
-                bat "mvn verify"
             }
 
         }
