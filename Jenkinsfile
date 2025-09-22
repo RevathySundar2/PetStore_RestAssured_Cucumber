@@ -8,7 +8,6 @@ pipeline
             steps
             {
                 echo "Building the code......"
-//                 bat "mvn clean"
             }
         }
         stage('Deploy')
