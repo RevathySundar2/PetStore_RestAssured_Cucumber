@@ -23,7 +23,7 @@ pipeline
             steps
             {
                 echo "Performing test execution...."
-                bat "mvn test"
+                sh "mvn test"
             }
 
         }
