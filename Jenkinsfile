@@ -22,7 +22,7 @@ pipeline
             steps
             {
                 echo "Performing test execution...."
-                sh "mvn test"
+                sh "mvn clean verify"
             }
 
         }
