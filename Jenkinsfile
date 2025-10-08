@@ -4,6 +4,7 @@ pipeline
     parameters
     {
        choice(name: 'ENV', choices:['qa','uat','prod'], description: 'Select Environment')
+       choice(name:'TAGS', choices:['@smoketest', '@regression', '@smoke', '@SampleLearning'])
     }
     stages
     {
@@ -26,7 +27,7 @@ pipeline
             steps
             {
                 echo "Performing test execution...."
-                sh "mvn clean verify -P${params.ENV}"
+                sh "mvn clean verify -P${params.ENV} -Dcucumber.filter.tags=${params.TAGS}"
             }
 
         }
