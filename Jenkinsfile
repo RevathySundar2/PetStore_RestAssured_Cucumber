@@ -26,6 +26,7 @@ pipeline
         {
             steps
             {
+                agent { docker { image 'maven:3.9.9-eclipse-temurin-17' } }
                 echo "Performing test execution...."
                 sh "mvn clean verify -P${params.ENV} -Dcucumber.filter.tags=${params.TAGS}"
             }
