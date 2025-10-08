@@ -16,5 +16,7 @@ public class testContextclass {
     public void setTransferingResponse(Response transferingResponse) {
         this.transferingResponse = transferingResponse;
     }
+
+    
 }
 

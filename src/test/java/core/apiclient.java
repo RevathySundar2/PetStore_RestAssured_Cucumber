@@ -17,13 +17,16 @@ public class apiclient {
                     .extract().response();
     }
 
-    public Response get(String path, int id)
+    public Response get(String path, String username)
     {
         Response response = given()
                                 .spec(requestSpecFactory.get())
+                                .pathParam("username", username)
+                                .log().all()
                             .when()
-                                 .get(path)
+                                 .get(path+"{username}")
                             .then()
+                                 .log().all()
                                  .extract().response();
 
         return response;

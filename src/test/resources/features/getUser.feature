@@ -1,7 +1,9 @@
+@smoketest
 Feature:
 
-#  @smoketest
-#  Scenario: Fetching an existing user
-#    Given Get the user from geturl
-#    When Providing the user to be retrieved
-#    Then return the user
+Scenario:
+  Given Read the userid from the csv file
+  When Retrieve the user details
+  Then Display the user details
+  And Response code is 200
+
