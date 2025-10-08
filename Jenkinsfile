@@ -1,6 +1,10 @@
 pipeline
 {
     agent any
+    parameters
+    {
+       choice(name: 'ENV', choices:['qa','uat','prod'], description: 'Select Environment')
+    }
     stages
     {
         stage('Build')
@@ -22,7 +26,7 @@ pipeline
             steps
             {
                 echo "Performing test execution...."
-                sh "mvn test"
+                sh "mvn clean verify -P${params.ENV}"
             }
 
         }
