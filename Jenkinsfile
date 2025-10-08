@@ -6,6 +6,9 @@ pipeline
        choice(name: 'ENV', choices:['qa','uat','prod'], description: 'Select Environment')
        choice(name:'TAGS', choices:['@smoketest', '@regression', '@smoke', '@SampleLearning'])
     }
+    tools {
+    maven 'Maven_3.9.9'
+    }
     stages
     {
         stage('Build')
