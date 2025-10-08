@@ -7,7 +7,7 @@ pipeline
        choice(name:'TAGS', choices:['@smoketest', '@regression', '@smoke', '@SampleLearning'])
     }
     tools {
-    maven 'Apache Maven_3.9.9'
+    maven 'Apache Maven 3.9.9'
     }
     stages
     {
